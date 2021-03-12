@@ -31,7 +31,7 @@ new_file.head
 # In[2]:
 
 
-stateshape = gpd.read_file('https://github.com/JKAY3366/TrialMap/blob/83014556628e603a2a279ab6ba542b5caeb747c7/States/Admin2.shp')
+stateshape = gpd.read_file("/States/Admin2.shp")
 stateshape
 
 
