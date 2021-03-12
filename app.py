@@ -64,7 +64,7 @@ color_mapper = LinearColorMapper(palette = palette, low = 0.5, high = 1)
 #Define custom tick labels for color bar.
 tick_labels = {'0': '0', '0.4': '0.4', '0.5':'0.5', '0.6':'0.6', '0.7':'0.7', '0.8':'0.8', '0.9':'0.9','1':'1'}
 #Add hover tool
-hover = HoverTool(tooltips = [ ('State','@ST_NM'),('HDI', '@HDI')])
+hover = HoverTool(tooltips = [ ('State','@NAME_1'),('HDI', '@HDI')])
 #Create color bar. 
 color_bar = ColorBar(color_mapper=color_mapper, label_standoff=8,width = 500, height = 20,
                      border_line_color=None,location = (0,0), orientation = 'horizontal', major_label_overrides = tick_labels)
