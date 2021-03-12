@@ -15,7 +15,18 @@ from bokeh.plotting import figure
 from bokeh.models import GeoJSONDataSource, LinearColorMapper, ColorBar, Slider, HoverTool
 from bokeh.palettes import brewer
 from bokeh.layouts import widgetbox, row, column
+import requests
+import io
+    
+# Downloading the csv file from your GitHub account
 
+url = "https://raw.githubusercontent.com/JKAY3366/TrialMap/main/modified-HDI.csv" # Make sure the url is the raw version of the file on GitHub
+download = requests.get(url).content
+
+# Reading the downloaded content and turning it into a pandas dataframe
+
+new_file = pd.read_csv(io.StringIO(download.decode('utf-8')))
+new_file.head
 
 # In[2]:
 
@@ -27,8 +38,7 @@ stateshape
 # In[5]:
 
 
-new_file = pd.read_csv('https://github.com/JKAY3366/TrialMap/blob/83014556628e603a2a279ab6ba542b5caeb747c7/modified-HDI.csv')
-new_file.head(55)
+
 
 
 # In[6]:
